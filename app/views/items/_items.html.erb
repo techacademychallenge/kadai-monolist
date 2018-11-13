@@ -14,8 +14,11 @@
                 <p class="item-title"><%= item.name %></p>
               <% end %>
               <div class="buttons text-center">
-                <%if logged_in? %>
+                <% if logged_in? %>
                   <%= render 'ownerships/want_button', item: item %>
+                <% end %>
+                <% if logged_in? %>
+                  <%= render 'ownerships/have_button', item: item %>
                 <% end %>
               </div>
             </div>
